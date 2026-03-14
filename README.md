@@ -65,28 +65,32 @@ docker-compose.yml
 Dockerfile
 README.md
 pyproject.toml
+```
 
 ## API
+```text
 GET /prices?ticker=btc_usd - Получить все сохранённые цены по тикеру
 GET /prices/latest?ticker=btc_usd - Получить последнюю цену по тикеру
 GET /prices/filter?ticker=btc_usd&from_ts=1773427000000000&to_ts=1773428000000000 - Получить цены по тикеру с фильтром по времени
-
+```
 ## Переменные окружения
 Создай файл .env в корне проекта как .env.example.
 
 ## Запуск
+```text
 Требования:
 - Docker Desktop
 
 Команда запуска: 
 docker compose up --build
-
+```
 ## Что поднимется
+```text
 db — PostgreSQL
 redis — Redis
 migrate — контейнер для применения Alembic миграций
 api — FastAPI приложение
 worker — Celery worker со встроенным beat
-
+```
 
 
