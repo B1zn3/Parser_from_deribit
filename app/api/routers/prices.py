@@ -13,7 +13,7 @@ router = APIRouter(prefix="/prices", tags=["prices"])
 def _validate_time_range(from_ts: int | None, to_ts: int | None) -> None:
     if from_ts is not None and to_ts is not None and from_ts > to_ts:
         raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             detail="'from_ts' должно быть меньше или равно 'to_ts'",
         )
 
